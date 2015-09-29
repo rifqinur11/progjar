@@ -20,7 +20,6 @@ def chat_server():
     print "Chat server started on port " + str(PORT)
  
     while 1:
-
         ready_to_read,ready_to_write,in_error = select.select(SOCKET_LIST,[],[],0)
       
         for sock in ready_to_read:
